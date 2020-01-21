@@ -8,7 +8,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
 
-RUN mvn clean install
+RUN mvn clean install -DskipTests=true
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
