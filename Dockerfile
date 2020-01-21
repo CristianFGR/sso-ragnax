@@ -8,7 +8,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
 
-RUN ./mvnw install -DskipTests
+RUN mvn clean install
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
