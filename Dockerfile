@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine as build
+FROM zenika/alpine-maven as build
 WORKDIR /workspace/app
 
 COPY settings.xml /usr/lib/mvn/conf/settings.xml
