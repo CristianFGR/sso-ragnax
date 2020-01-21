@@ -1,6 +1,8 @@
 FROM openjdk:8-jdk-alpine as build
 WORKDIR /workspace/app
 
+COPY settings.xml /usr/lib/mvn/conf/settings.xml
+
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
